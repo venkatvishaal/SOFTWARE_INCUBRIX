@@ -1,0 +1,10 @@
+{
+  "job_id": "1b216dbd-b39c-4288-889f-7bf0396315c4",
+  "spec_hash": "1e706e0af49c2f37",
+  "positive_prompt": "feminine-presenting person, teenager, approximately 16 years old, brown skin tone, long hair, black straight hair, natural, wearing athletic sportswear, neutral white background, slightly tilted upward gaze, photorealistic portrait, high detail, sharp focus, professional photography, 8k resolution, cinematic lighting",
+  "negative_prompt": "blurry, watermark, text overlay, logo, signature, deformed anatomy, extra limbs, fused fingers, bad hands, ugly, low quality, disfigured, nsfw, nude, violent, offensive content, cartoon, anime, painting, illustration, 3d render, cgi, deformed, low_quality",
+  "seed": 505,
+  "width": 512,
+  "height": 512,
+  "model": "stabilityai/stable-diffusion-v1-5"
+}

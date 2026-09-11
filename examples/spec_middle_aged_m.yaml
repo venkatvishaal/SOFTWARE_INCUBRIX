@@ -1,0 +1,16 @@
+# Example Avatar Spec — Middle-Aged Male
+avatar_id: "6ba7b810-9dad-11d1-80b4-00c04fd430c8"
+age_band: "middle_aged"
+presentation: "masculine"
+skin_tone: "deep_dark"
+hair:
+  length: "short"
+  colour: "black"
+  texture: "curly"
+  style: "cropped"
+attire: "formal_suit"
+background: "office"
+pose: "three_quarter_left"
+seed: 101
+aspect_ratio: "1:1"
+resolution_hint: 512

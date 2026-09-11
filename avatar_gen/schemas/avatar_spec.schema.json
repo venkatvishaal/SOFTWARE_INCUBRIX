@@ -1,0 +1,111 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "avatar_spec.schema.json",
+  "title": "AvatarSpec",
+  "description": "Structured avatar specification — source of truth for generation",
+  "type": "object",
+  "required": ["age_band", "presentation", "skin_tone", "hair", "attire", "background", "pose", "seed"],
+  "additionalProperties": false,
+  "properties": {
+    "avatar_id": {
+      "type": "string",
+      "description": "Optional pre-assigned UUID; auto-generated if absent"
+    },
+    "age_band": {
+      "type": "string",
+      "enum": ["child", "teenager", "young_adult", "middle_aged", "senior"],
+      "description": "Broad age group — no specific age claimed"
+    },
+    "presentation": {
+      "type": "string",
+      "enum": ["feminine", "masculine", "androgynous"],
+      "description": "Gender presentation descriptor"
+    },
+    "skin_tone": {
+      "type": "string",
+      "enum": [
+        "very_light_fair", "light_fair", "light_medium", "medium",
+        "warm_medium", "olive", "tan", "brown", "dark_brown", "deep_dark"
+      ],
+      "description": "Fitzpatrick-anchored skin tone (not nationality)"
+    },
+    "hair": {
+      "type": "object",
+      "required": ["length", "colour", "texture"],
+      "properties": {
+        "length": { "type": "string", "enum": ["bald", "very_short", "short", "medium", "long", "very_long"] },
+        "colour": { "type": "string", "enum": ["black", "dark_brown", "medium_brown", "auburn", "blonde", "red", "grey", "white", "dyed_blue", "dyed_red", "dyed_green"] },
+        "texture": { "type": "string", "enum": ["straight", "wavy", "curly", "coily", "afro", "locs"] },
+        "style": { "type": ["string", "null"], "description": "Optional freeform style hint" }
+      }
+    },
+    "attire": {
+      "type": "string",
+      "enum": [
+        "formal_suit", "business_casual", "casual_tshirt", "casual_shirt",
+        "traditional_attire", "uniform_medical", "uniform_corporate",
+        "sportswear", "creative_casual", "winter_coat"
+      ]
+    },
+    "background": {
+      "type": "string",
+      "enum": [
+        "neutral_grey", "neutral_white", "gradient_blue", "office",
+        "outdoor_park", "outdoor_urban", "studio_lit", "home_bookshelf",
+        "conference_room", "classroom"
+      ]
+    },
+    "pose": {
+      "type": "string",
+      "enum": [
+        "front_facing", "three_quarter_left", "three_quarter_right",
+        "profile_left", "profile_right", "slight_tilt_up", "slight_tilt_down"
+      ]
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647,
+      "description": "Deterministic generation seed"
+    },
+    "negative_controls": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": ["blurry", "watermark", "nsfw", "deformed", "low_quality"],
+      "description": "Negative prompt tokens applied to every generation"
+    },
+    "aspect_ratio": {
+      "type": "string",
+      "enum": ["1:1", "3:4", "4:3", "9:16", "16:9"],
+      "default": "1:1"
+    },
+    "resolution_hint": {
+      "type": "integer",
+      "enum": [256, 384, 512, 768],
+      "default": 512,
+      "description": "Starting resolution hint; adaptive ladder may override"
+    },
+    "reference_images": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Paths to consented reference photos — Exceptional tier only"
+    },
+    "consent_token": {
+      "type": ["string", "null"],
+      "description": "UUID reference to a Consent Event Record — required when reference_images present"
+    },
+    "model_override": {
+      "type": ["string", "null"],
+      "description": "Override the default model slug for this job"
+    },
+    "extra_prompt_tokens": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Additional positive prompt tokens appended by the caller"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Arbitrary caller metadata; preserved in manifest"
+    }
+  }
+}

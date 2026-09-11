@@ -1,0 +1,22 @@
+# Example Avatar Spec — Senior Androgynous
+avatar_id: "7c9e6679-7425-40de-944b-e07fc1f90001"
+age_band: "senior"
+presentation: "androgynous"
+skin_tone: "tan"
+hair:
+  length: "short"
+  colour: "grey"
+  texture: "straight"
+  style: "natural"
+attire: "creative_casual"
+background: "home_bookshelf"
+pose: "front_facing"
+seed: 202
+aspect_ratio: "1:1"
+resolution_hint: 512
+negative_controls:
+  - "blurry"
+  - "watermark"
+  - "nsfw"
+  - "deformed"
+  - "low_quality"

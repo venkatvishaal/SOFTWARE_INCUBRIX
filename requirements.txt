@@ -1,0 +1,30 @@
+# ── Core runtime (CPU-safe, no GPU required) ──────────────────────────────────
+click==8.1.7
+pyyaml==6.0.1
+jsonschema==4.21.1
+pydantic==2.6.4
+Pillow==10.3.0
+numpy==1.26.4
+scikit-image==0.22.0
+scikit-learn==1.4.2
+requests==2.31.0
+cryptography==42.0.5
+invisible-watermark==0.2.0
+structlog==24.1.0
+tqdm==4.66.2
+rich==13.7.1
+scipy==1.12.0
+
+# ── Optional GPU inference (install separately on accelerator) ─────────────────
+# torch==2.2.2
+# diffusers==0.27.2
+# transformers==4.39.3
+# accelerate==0.28.0
+# safetensors==0.4.2
+
+# ── Optional CLIP evaluation ───────────────────────────────────────────────────
+# open-clip-torch==2.24.0
+
+# ── Optional face embedding (ArcFace / InsightFace) ───────────────────────────
+# insightface==0.7.3
+# onnxruntime==1.17.1

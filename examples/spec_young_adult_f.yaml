@@ -1,0 +1,22 @@
+# Example Avatar Spec — Young Adult Female
+avatar_id: "550e8400-e29b-41d4-a716-446655440000"
+age_band: "young_adult"
+presentation: "feminine"
+skin_tone: "olive"
+hair:
+  length: "medium"
+  colour: "dark_brown"
+  texture: "wavy"
+  style: "natural"
+attire: "business_casual"
+background: "neutral_grey"
+pose: "front_facing"
+seed: 42
+aspect_ratio: "1:1"
+resolution_hint: 512
+negative_controls:
+  - "blurry"
+  - "watermark"
+  - "nsfw"
+  - "deformed"
+  - "low_quality"

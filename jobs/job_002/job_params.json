@@ -1,0 +1,10 @@
+{
+  "job_id": "b46ce3e8-1239-4aea-b7d5-be277ecbb0d4",
+  "spec_hash": "94dca001effd2a93",
+  "positive_prompt": "masculine-presenting person, middle-aged adult, approximately 45 years old, deep dark skin tone, short hair, black curly hair, cropped, wearing a formal business suit and tie, modern office environment background, three-quarter view facing left, photorealistic portrait, high detail, sharp focus, professional photography, 8k resolution, cinematic lighting",
+  "negative_prompt": "blurry, watermark, text overlay, logo, signature, deformed anatomy, extra limbs, fused fingers, bad hands, ugly, low quality, disfigured, nsfw, nude, violent, offensive content, cartoon, anime, painting, illustration, 3d render, cgi, deformed, low_quality",
+  "seed": 101,
+  "width": 512,
+  "height": 512,
+  "model": "stabilityai/stable-diffusion-v1-5"
+}

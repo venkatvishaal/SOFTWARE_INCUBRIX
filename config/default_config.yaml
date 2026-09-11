@@ -1,0 +1,47 @@
+# avatar-gen default configuration
+# All paths are relative to the project root unless absolute.
+# Override via --config flag or AVATAR_GEN_CONFIG env var.
+
+pipeline:
+  version: "1.0.0"
+  default_model: "stabilityai/stable-diffusion-v1-5"
+  default_model_revision: "main"
+  default_steps: 30
+  default_guidance_scale: 7.5
+  default_compute_route: "local_cpu"   # local_cpu | kaggle | lightning | hf_zerogpu
+
+paths:
+  output_dir: "output"
+  job_dir: "jobs"
+  cache_dir: ".cache/models"
+  log_dir: "logs"
+  keys_dir: "keys"
+  consent_dir: "consents"
+
+safety:
+  nsfw_threshold: 0.5          # Block if NSFW score >= threshold
+  enable_watermark: true
+  watermark_algorithm: "dwtDct"
+  watermark_payload_bits: 64
+  jpeg_verify_quality: 70      # Quality used to test watermark survival
+
+quality:
+  min_adherence_pct: 70.0      # Spec-delta LOW_ADHERENCE threshold
+  min_orthogonality_score: 0.85  # BLEED_WARNING threshold
+  min_entropy_bits: 1.5        # Bias auditor GAP_WARNING threshold
+
+adaptive_resolution:
+  enabled: true
+  ladder: [256, 384, 512, 768]
+  max_rung: 512                # Default ceiling (override with --resolution)
+  upsampler: "lanczos"         # lanczos | real_esrgan
+
+logging:
+  level: "INFO"                # DEBUG | INFO | WARNING | ERROR
+  format: "json"               # json | console
+  log_file: "logs/avatar_gen.jsonl"
+
+benchmark:
+  repetitions: 3
+  warmup_runs: 1
+  measure_peak_ram: true

@@ -1,0 +1,10 @@
+{
+  "job_id": "daa1a603-dc88-4c0b-ab3c-4cf27f746d32",
+  "spec_hash": "82fc48fd2f736287",
+  "positive_prompt": "masculine-presenting person, young adult, approximately 25 years old, light fair skin tone, medium-length hair, blonde wavy hair, natural, wearing a casual button-down shirt, outdoor park setting background, three-quarter view facing right, photorealistic portrait, high detail, sharp focus, professional photography, 8k resolution, cinematic lighting",
+  "negative_prompt": "blurry, watermark, text overlay, logo, signature, deformed anatomy, extra limbs, fused fingers, bad hands, ugly, low quality, disfigured, nsfw, nude, violent, offensive content, cartoon, anime, painting, illustration, 3d render, cgi, deformed, low_quality",
+  "seed": 303,
+  "width": 512,
+  "height": 512,
+  "model": "stabilityai/stable-diffusion-v1-5"
+}

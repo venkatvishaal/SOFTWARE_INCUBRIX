@@ -1,0 +1,22 @@
+# Example Avatar Spec — Teenager Female
+avatar_id: "7c9e6679-7425-40de-944b-e07fc1f90004"
+age_band: "teenager"
+presentation: "feminine"
+skin_tone: "brown"
+hair:
+  length: "long"
+  colour: "black"
+  texture: "straight"
+  style: "natural"
+attire: "sportswear"
+background: "neutral_white"
+pose: "slight_tilt_up"
+seed: 505
+aspect_ratio: "1:1"
+resolution_hint: 512
+negative_controls:
+  - "blurry"
+  - "watermark"
+  - "nsfw"
+  - "deformed"
+  - "low_quality"

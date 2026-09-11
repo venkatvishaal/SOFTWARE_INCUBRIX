@@ -1,0 +1,26 @@
+age_band: young_adult
+aspect_ratio: '1:1'
+attire: business_casual
+avatar_id: 550e8400-e29b-41d4-a716-446655440000
+background: neutral_grey
+consent_token: null
+extra_prompt_tokens: []
+hair:
+  colour: dark_brown
+  length: medium
+  style: natural
+  texture: wavy
+metadata: {}
+model_override: null
+negative_controls:
+- blurry
+- watermark
+- nsfw
+- deformed
+- low_quality
+pose: front_facing
+presentation: feminine
+reference_images: []
+resolution_hint: 512
+seed: 42
+skin_tone: olive

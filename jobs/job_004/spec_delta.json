@@ -1,0 +1,31 @@
+{
+  "avatar_id": "7c9e6679-7425-40de-944b-e07fc1f90002",
+  "attribute_verdicts": {
+    "skin_tone": {
+      "requested": "light_fair",
+      "detected": "tan",
+      "match": "MISSING",
+      "delta": "detected=tan"
+    },
+    "hair": {
+      "requested": "blonde",
+      "detected": "medium_brown",
+      "match": "MISSING",
+      "delta": "detected_colour=medium_brown"
+    },
+    "background": {
+      "requested": "outdoor_park",
+      "detected": "unknown",
+      "match": "MISSING",
+      "delta": "detected=unknown"
+    },
+    "pose": {
+      "requested": "three_quarter_right",
+      "detected": "indeterminate",
+      "match": "PARTIAL",
+      "delta": "centroid_offset=0.05"
+    }
+  },
+  "overall_adherence_pct": 12.5,
+  "low_adherence": true
+}

@@ -1,0 +1,80 @@
+{
+  "avatar_id": "7c9e6679-7425-40de-944b-e07fc1f90002",
+  "spec": {
+    "avatar_id": "7c9e6679-7425-40de-944b-e07fc1f90002",
+    "age_band": "young_adult",
+    "presentation": "masculine",
+    "skin_tone": "light_fair",
+    "hair": {
+      "length": "medium",
+      "colour": "blonde",
+      "texture": "wavy",
+      "style": "natural"
+    },
+    "attire": "casual_shirt",
+    "background": "outdoor_park",
+    "pose": "three_quarter_right",
+    "seed": 303,
+    "negative_controls": [
+      "blurry",
+      "watermark",
+      "nsfw",
+      "deformed",
+      "low_quality"
+    ],
+    "aspect_ratio": "1:1",
+    "resolution_hint": 512,
+    "reference_images": [],
+    "consent_token": null,
+    "model_override": null,
+    "extra_prompt_tokens": [],
+    "metadata": {}
+  },
+  "seed": 303,
+  "model": "stabilityai/stable-diffusion-v1-5",
+  "model_revision": "v1.0",
+  "checkpoint": null,
+  "prompt_generated": "masculine-presenting person, young adult, approximately 25 years old, light fair skin tone, medium-length hair, blonde wavy hair, natural, wearing a casual button-down shirt, outdoor park setting background, three-quarter view facing right, photorealistic portrait, high detail, sharp focus, professional photography, 8k resolution, cinematic lighting",
+  "negative_prompt": "blurry, watermark, text overlay, logo, signature, deformed anatomy, extra limbs, fused fingers, bad hands, ugly, low quality, disfigured, nsfw, nude, violent, offensive content, cartoon, anime, painting, illustration, 3d render, cgi, deformed, low_quality",
+  "provenance": {
+    "pipeline_version": "1.0.0",
+    "generated_at": "2026-09-11T12:42:31.867492+00:00",
+    "compute_route": "free_ai",
+    "runtime_sec": 11.629,
+    "steps": 30,
+    "guidance_scale": 7.5
+  },
+  "safety": {
+    "passed": true,
+    "checks": [
+      "dimension_check(OK: 512x512)",
+      "blank_check(OK: variance=2320.57)",
+      "nsfw_heuristic(OK: score=0.695)",
+      "watermark_absent(OK: corner_contrast=255)"
+    ],
+    "flags": [],
+    "score": 0.6947054181780135
+  },
+  "dimensions": {
+    "width": 512,
+    "height": 512,
+    "aspect_ratio": "1:1"
+  },
+  "orthogonality_scores": null,
+  "watermark": {
+    "algorithm": "dwtDct",
+    "payload_bits": 64,
+    "payload_hex": "9e539c9764d76cf5",
+    "ber_self_check": 0.375,
+    "survives_jpeg_q70": false,
+    "embedded": true
+  },
+  "consent_chain": null,
+  "rung_progression": null,
+  "compute_saved_pct": null,
+  "output_files": {
+    "image": "C:\\TSVV\\INCUBRIX\\SOFTWARE\\avatar-gen\\jobs\\job_004\\avatar_7c9e6679.png",
+    "spec_delta": "C:\\TSVV\\INCUBRIX\\SOFTWARE\\avatar-gen\\jobs\\job_004\\spec_delta.json",
+    "failure_record": null
+  }
+}

@@ -1,0 +1,26 @@
+age_band: teenager
+aspect_ratio: '1:1'
+attire: sportswear
+avatar_id: 7c9e6679-7425-40de-944b-e07fc1f90004
+background: neutral_white
+consent_token: null
+extra_prompt_tokens: []
+hair:
+  colour: black
+  length: long
+  style: natural
+  texture: straight
+metadata: {}
+model_override: null
+negative_controls:
+- blurry
+- watermark
+- nsfw
+- deformed
+- low_quality
+pose: slight_tilt_up
+presentation: feminine
+reference_images: []
+resolution_hint: 512
+seed: 505
+skin_tone: brown

@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "avatar_manifest.schema.json",
+  "title": "AvatarManifest",
+  "description": "Full provenance record emitted alongside every generated avatar",
+  "type": "object",
+  "required": ["avatar_id", "spec", "seed", "model", "model_revision", "prompt_generated", "negative_prompt", "provenance", "safety", "dimensions"],
+  "properties": {
+    "avatar_id":           { "type": "string" },
+    "spec":                { "type": "object" },
+    "seed":                { "type": "integer" },
+    "model":               { "type": "string" },
+    "model_revision":      { "type": "string" },
+    "checkpoint":          { "type": ["string", "null"] },
+    "prompt_generated":    { "type": "string" },
+    "negative_prompt":     { "type": "string" },
+    "provenance": {
+      "type": "object",
+      "required": ["pipeline_version", "generated_at", "compute_route", "runtime_sec"],
+      "properties": {
+        "pipeline_version": { "type": "string" },
+        "generated_at":     { "type": "string", "format": "date-time" },
+        "compute_route":    { "type": "string" },
+        "runtime_sec":      { "type": "number" },
+        "steps":            { "type": "integer" },
+        "guidance_scale":   { "type": "number" }
+      }
+    },
+    "safety": {
+      "type": "object",
+      "required": ["passed", "checks", "flags"],
+      "properties": {
+        "passed":  { "type": "boolean" },
+        "checks":  { "type": "array", "items": { "type": "string" } },
+        "flags":   { "type": "array", "items": { "type": "string" } },
+        "score":   { "type": ["number", "null"] }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "required": ["width", "height", "aspect_ratio"],
+      "properties": {
+        "width":        { "type": "integer" },
+        "height":       { "type": "integer" },
+        "aspect_ratio": { "type": "string" }
+      }
+    },
+    "orthogonality_scores": { "type": ["object", "null"] },
+    "watermark": {
+      "type": ["object", "null"],
+      "properties": {
+        "algorithm":        { "type": "string" },
+        "payload_bits":     { "type": "integer" },
+        "ber_self_check":   { "type": "number" },
+        "survives_jpeg_q70":{ "type": "boolean" }
+      }
+    },
+    "consent_chain":      { "type": ["object", "null"] },
+    "rung_progression":   { "type": ["array", "null"], "items": { "type": "string" } },
+    "compute_saved_pct":  { "type": ["number", "null"] },
+    "spec_adherence": {
+      "type": ["object", "null"],
+      "properties": {
+        "overall_adherence_pct": { "type": "number" },
+        "low_adherence":          { "type": "boolean" },
+        "report_file":            { "type": ["string", "null"] },
+        "mismatched_attributes":  { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "output_files": {
+      "type": "object",
+      "properties": {
+        "image":       { "type": "string" },
+        "spec_delta":  { "type": ["string", "null"] },
+        "failure_record": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

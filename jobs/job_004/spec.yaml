@@ -1,0 +1,26 @@
+age_band: young_adult
+aspect_ratio: '1:1'
+attire: casual_shirt
+avatar_id: 7c9e6679-7425-40de-944b-e07fc1f90002
+background: outdoor_park
+consent_token: null
+extra_prompt_tokens: []
+hair:
+  colour: blonde
+  length: medium
+  style: natural
+  texture: wavy
+metadata: {}
+model_override: null
+negative_controls:
+- blurry
+- watermark
+- nsfw
+- deformed
+- low_quality
+pose: three_quarter_right
+presentation: masculine
+reference_images: []
+resolution_hint: 512
+seed: 303
+skin_tone: light_fair

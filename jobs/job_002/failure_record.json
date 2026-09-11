@@ -1,0 +1,10 @@
+{
+  "failure_code": "WATERMARK_FAILURE",
+  "category": "Compliance",
+  "timestamp": "2026-09-11T12:40:17.688627+00:00",
+  "spec_hash": "94dca001effd2a93",
+  "model": "stabilityai/stable-diffusion-v1-5",
+  "seed": 101,
+  "error_detail": "Safety flags: ['VISIBLE_WATERMARK_DETECTED']",
+  "suggested_action": "Check image format (must be RGB PNG/JPEG); verify invisible-watermark install"
+}

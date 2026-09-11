@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "avatar-gen"
+version = "1.0.0"
+description = "Open-Source AI Human-Avatar Generation — IncuBrix SASTRA 2027 Track 02"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "IncuBrix Candidate" }]
+
+dependencies = [
+    # CLI
+    "click>=8.1.7",
+    # Data / config
+    "pyyaml>=6.0.1",
+    "jsonschema>=4.21.1",
+    "pydantic>=2.6.0",
+    # Image handling (CPU-safe)
+    "Pillow>=10.3.0",
+    "numpy>=1.26.4",
+    # Lightweight vision (CPU)
+    "scikit-image>=0.22.0",
+    "scikit-learn>=1.4.0",
+    # HTTP / notebook comms
+    "requests>=2.31.0",
+    # Cryptography (NF-04 consent chain)
+    "cryptography>=42.0.0",
+    # Steganography (NF-05)
+    "invisible-watermark>=0.2.0",
+    # Structured logging
+    "structlog>=24.1.0",
+    # Progress bars
+    "tqdm>=4.66.0",
+    # Tabular output
+    "rich>=13.7.0",
+    # Metrics helpers
+    "scipy>=1.12.0",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "torch>=2.2.0",
+    "diffusers>=0.27.0",
+    "transformers>=4.39.0",
+    "accelerate>=0.28.0",
+    "safetensors>=0.4.2",
+]
+clip = [
+    "open-clip-torch>=2.24.0",
+]
+face = [
+    "insightface>=0.7.3",
+    "onnxruntime>=1.17.1",
+]
+dev = [
+    "pytest>=8.1.0",
+    "pytest-cov>=5.0.0",
+    "pytest-mock>=3.14.0",
+    "black>=24.3.0",
+    "ruff>=0.3.5",
+    "mypy>=1.9.0",
+]
+
+[project.scripts]
+avatar-gen = "avatar_gen.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["avatar_gen*"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.black]
+line-length = 100

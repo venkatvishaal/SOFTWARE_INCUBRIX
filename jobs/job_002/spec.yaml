@@ -1,0 +1,26 @@
+age_band: middle_aged
+aspect_ratio: '1:1'
+attire: formal_suit
+avatar_id: 6ba7b810-9dad-11d1-80b4-00c04fd430c8
+background: office
+consent_token: null
+extra_prompt_tokens: []
+hair:
+  colour: black
+  length: short
+  style: cropped
+  texture: curly
+metadata: {}
+model_override: null
+negative_controls:
+- blurry
+- watermark
+- nsfw
+- deformed
+- low_quality
+pose: three_quarter_left
+presentation: masculine
+reference_images: []
+resolution_hint: 512
+seed: 101
+skin_tone: deep_dark

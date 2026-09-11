@@ -1,0 +1,31 @@
+{
+  "avatar_id": "7c9e6679-7425-40de-944b-e07fc1f90004",
+  "attribute_verdicts": {
+    "skin_tone": {
+      "requested": "brown",
+      "detected": "dark_brown",
+      "match": "PARTIAL",
+      "delta": "detected=dark_brown (adjacent tone)"
+    },
+    "hair": {
+      "requested": "black",
+      "detected": "grey",
+      "match": "MISSING",
+      "delta": "detected_colour=grey"
+    },
+    "background": {
+      "requested": "neutral_white",
+      "detected": "neutral_background",
+      "match": "FULL",
+      "delta": null
+    },
+    "pose": {
+      "requested": "slight_tilt_up",
+      "detected": "indeterminate",
+      "match": "PARTIAL",
+      "delta": "centroid_offset=-0.10"
+    }
+  },
+  "overall_adherence_pct": 50.0,
+  "low_adherence": true
+}

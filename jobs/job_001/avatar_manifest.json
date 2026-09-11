@@ -1,0 +1,80 @@
+{
+  "avatar_id": "550e8400-e29b-41d4-a716-446655440000",
+  "spec": {
+    "avatar_id": "550e8400-e29b-41d4-a716-446655440000",
+    "age_band": "young_adult",
+    "presentation": "feminine",
+    "skin_tone": "olive",
+    "hair": {
+      "length": "medium",
+      "colour": "dark_brown",
+      "texture": "wavy",
+      "style": "natural"
+    },
+    "attire": "business_casual",
+    "background": "neutral_grey",
+    "pose": "front_facing",
+    "seed": 42,
+    "negative_controls": [
+      "blurry",
+      "watermark",
+      "nsfw",
+      "deformed",
+      "low_quality"
+    ],
+    "aspect_ratio": "1:1",
+    "resolution_hint": 512,
+    "reference_images": [],
+    "consent_token": null,
+    "model_override": null,
+    "extra_prompt_tokens": [],
+    "metadata": {}
+  },
+  "seed": 42,
+  "model": "stabilityai/stable-diffusion-v1-5",
+  "model_revision": "v1.0",
+  "checkpoint": null,
+  "prompt_generated": "feminine-presenting person, young adult, approximately 25 years old, olive skin tone, medium-length hair, dark brown wavy hair, natural, wearing business casual attire, neutral grey background, facing directly forward, portrait orientation, photorealistic portrait, high detail, sharp focus, professional photography, 8k resolution, cinematic lighting",
+  "negative_prompt": "blurry, watermark, text overlay, logo, signature, deformed anatomy, extra limbs, fused fingers, bad hands, ugly, low quality, disfigured, nsfw, nude, violent, offensive content, cartoon, anime, painting, illustration, 3d render, cgi, deformed, low_quality",
+  "provenance": {
+    "pipeline_version": "1.0.0",
+    "generated_at": "2026-09-11T12:49:58.136578+00:00",
+    "compute_route": "free_ai",
+    "runtime_sec": 1.595,
+    "steps": 30,
+    "guidance_scale": 7.5
+  },
+  "safety": {
+    "passed": true,
+    "checks": [
+      "dimension_check(OK: 512x512)",
+      "blank_check(OK: variance=3137.04)",
+      "nsfw_heuristic(OK: score=0.296)",
+      "watermark_absent(OK: corner_contrast=211)"
+    ],
+    "flags": [],
+    "score": 0.2964510236467634
+  },
+  "dimensions": {
+    "width": 512,
+    "height": 512,
+    "aspect_ratio": "1:1"
+  },
+  "orthogonality_scores": null,
+  "watermark": {
+    "algorithm": "dwtDct",
+    "payload_bits": 64,
+    "payload_hex": "a3a9e1ed64d76cf5",
+    "ber_self_check": 0.2969,
+    "survives_jpeg_q70": false,
+    "embedded": true
+  },
+  "consent_chain": null,
+  "rung_progression": null,
+  "compute_saved_pct": null,
+  "output_files": {
+    "image": "C:\\TSVV\\INCUBRIX\\SOFTWARE\\avatar-gen\\jobs\\job_001\\avatar_550e8400.png",
+    "spec_delta": "C:\\TSVV\\INCUBRIX\\SOFTWARE\\avatar-gen\\jobs\\job_001\\spec_delta.json",
+    "failure_record": null
+  }
+}

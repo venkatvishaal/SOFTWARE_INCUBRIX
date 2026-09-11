@@ -1,0 +1,22 @@
+# Example Avatar Spec — Young Adult Male
+avatar_id: "7c9e6679-7425-40de-944b-e07fc1f90002"
+age_band: "young_adult"
+presentation: "masculine"
+skin_tone: "light_fair"
+hair:
+  length: "medium"
+  colour: "blonde"
+  texture: "wavy"
+  style: "natural"
+attire: "casual_shirt"
+background: "outdoor_park"
+pose: "three_quarter_right"
+seed: 303
+aspect_ratio: "1:1"
+resolution_hint: 512
+negative_controls:
+  - "blurry"
+  - "watermark"
+  - "nsfw"
+  - "deformed"
+  - "low_quality"

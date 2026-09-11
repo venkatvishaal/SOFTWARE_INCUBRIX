@@ -1,0 +1,15 @@
+{
+  "spec_hash": "unknown",
+  "model_a": "stable-diffusion-v1-5",
+  "model_b": "pollinations-turbo",
+  "cmpp_overall": 0.875,
+  "cmpp_per_attribute": {
+    "hair": 0.5,
+    "pose": 1.0,
+    "skin_tone": 1.0,
+    "background": 1.0
+  },
+  "least_portable_attribute": "hair",
+  "most_portable_attribute": "pose",
+  "recommendation": "'hair' attribute prompts (portability=50.00%) require model-specific tuning when switching from stable-diffusion-v1-5 to pollinations-turbo. Consider model-specific token synonyms for this attribute."
+}

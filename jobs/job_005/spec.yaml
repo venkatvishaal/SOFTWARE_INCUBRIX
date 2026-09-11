@@ -1,0 +1,26 @@
+age_band: senior
+aspect_ratio: '1:1'
+attire: winter_coat
+avatar_id: 7c9e6679-7425-40de-944b-e07fc1f90003
+background: studio_lit
+consent_token: null
+extra_prompt_tokens: []
+hair:
+  colour: white
+  length: long
+  style: natural
+  texture: straight
+metadata: {}
+model_override: null
+negative_controls:
+- blurry
+- watermark
+- nsfw
+- deformed
+- low_quality
+pose: front_facing
+presentation: feminine
+reference_images: []
+resolution_hint: 512
+seed: 404
+skin_tone: warm_medium

@@ -1,0 +1,22 @@
+# Example Avatar Spec — Senior Female
+avatar_id: "7c9e6679-7425-40de-944b-e07fc1f90003"
+age_band: "senior"
+presentation: "feminine"
+skin_tone: "warm_medium"
+hair:
+  length: "long"
+  colour: "white"
+  texture: "straight"
+  style: "natural"
+attire: "winter_coat"
+background: "studio_lit"
+pose: "front_facing"
+seed: 404
+aspect_ratio: "1:1"
+resolution_hint: 512
+negative_controls:
+  - "blurry"
+  - "watermark"
+  - "nsfw"
+  - "deformed"
+  - "low_quality"

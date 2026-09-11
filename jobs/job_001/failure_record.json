@@ -1,0 +1,11 @@
+{
+  "failure_code": "MODEL_LOAD_ERROR",
+  "category": "Infrastructure",
+  "timestamp": "2026-09-10T02:23:15.119144+00:00",
+  "spec_hash": "daecf08053782274",
+  "model": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "seed": 42,
+  "evidence_context": "Preserved initial execution attempt failure record (missing diffusers GPU extras dependency). Patched re-run succeeded in avatar_manifest.json.",
+  "error_detail": "Traceback (most recent call last):\n  File \"C:\\TSVV\\INCUBRIX\\SOFTWARE\\avatar-gen\\avatar_gen\\inference_client.py\", line 182, in _load_pipeline\n    from diffusers import StableDiffusionPipeline\nModuleNotFoundError: No module named 'diffusers'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"C:\\TSVV\\INCUBRIX\\SOFTWARE\\avatar-gen\\avatar_gen\\cli.py\", line 206, in cmd_run\n    result = client.generate(\n             ^^^^^^^^^^^^^^^^\n  File \"C:\\TSVV\\INCUBRIX\\SOFTWARE\\avatar-gen\\avatar_gen\\inference_client.py\", line 212, in generate\n    self._load_pipeline()\n  File \"C:\\TSVV\\INCUBRIX\\SOFTWARE\\avatar-gen\\avatar_gen\\inference_client.py\", line 184, in _load_pipeline\n    raise RuntimeError(\nRuntimeError: GPU inference requires the 'gpu' extras: pip install 'avatar-gen[gpu]'\n",
+  "suggested_action": "Inspect failure_record.json error_detail for the raw traceback"
+}

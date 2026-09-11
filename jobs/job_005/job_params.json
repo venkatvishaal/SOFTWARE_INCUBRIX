@@ -1,0 +1,10 @@
+{
+  "job_id": "f50d6d8b-4e11-46e7-805c-0f1aab0b26bc",
+  "spec_hash": "b51c4e92be5629f0",
+  "positive_prompt": "feminine-presenting person, senior adult, approximately 65 years old, warm medium skin tone, long hair, white straight hair, natural, wearing a winter coat, professional studio lighting background, facing directly forward, portrait orientation, photorealistic portrait, high detail, sharp focus, professional photography, 8k resolution, cinematic lighting",
+  "negative_prompt": "blurry, watermark, text overlay, logo, signature, deformed anatomy, extra limbs, fused fingers, bad hands, ugly, low quality, disfigured, nsfw, nude, violent, offensive content, cartoon, anime, painting, illustration, 3d render, cgi, deformed, low_quality",
+  "seed": 404,
+  "width": 512,
+  "height": 512,
+  "model": "stabilityai/stable-diffusion-v1-5"
+}

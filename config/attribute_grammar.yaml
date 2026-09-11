@@ -1,0 +1,138 @@
+# Attribute Grammar — Avatar Attribute Grammar (AAG)
+# NF-06: Pre-generation conflict and stereotype-risk detection
+# severity levels: BLOCK | STEREOTYPE_RISK | WARN
+
+# ── Allowed enum values (mirrors avatar_spec.schema.json) ────────────────────
+allowed_values:
+  age_band:    [child, teenager, young_adult, middle_aged, senior]
+  presentation: [feminine, masculine, androgynous]
+  skin_tone:
+    - very_light_fair
+    - light_fair
+    - light_medium
+    - medium
+    - warm_medium
+    - olive
+    - tan
+    - brown
+    - dark_brown
+    - deep_dark
+  hair_length: [bald, very_short, short, medium, long, very_long]
+  hair_colour: [black, dark_brown, medium_brown, auburn, blonde, red, grey, white, dyed_blue, dyed_red, dyed_green]
+  hair_texture: [straight, wavy, curly, coily, afro, locs]
+  attire:
+    - formal_suit
+    - business_casual
+    - casual_tshirt
+    - casual_shirt
+    - traditional_attire
+    - uniform_medical
+    - uniform_corporate
+    - sportswear
+    - creative_casual
+    - winter_coat
+  background:
+    - neutral_grey
+    - neutral_white
+    - gradient_blue
+    - office
+    - outdoor_park
+    - outdoor_urban
+    - studio_lit
+    - home_bookshelf
+    - conference_room
+    - classroom
+  pose:
+    - front_facing
+    - three_quarter_left
+    - three_quarter_right
+    - profile_left
+    - profile_right
+    - slight_tilt_up
+    - slight_tilt_down
+
+# ── Compatibility rules: BLOCK-level contradictions ──────────────────────────
+block_rules:
+  - id: "AGE_ATTIRE_INFANT_FORMAL"
+    description: "Infant age band is incompatible with formal professional attire"
+    conditions:
+      - { field: age_band, value: child }
+      - { field: attire, value: formal_suit }
+    severity: BLOCK
+
+  - id: "BALD_LONG_HAIR"
+    description: "Hair length 'bald' is incompatible with long or very_long hair"
+    conditions:
+      - { field: hair.length, value: bald }
+      - { field: hair.length, value: [long, very_long] }
+    severity: BLOCK
+
+  - id: "PROFILE_FRONT_CONFLICT"
+    description: "Cannot simultaneously specify front_facing and profile poses"
+    conditions:
+      - { field: pose, value: front_facing }
+      - { field: pose, value: [profile_left, profile_right] }
+    severity: BLOCK
+
+# ── Warn rules: improbable but not impossible ────────────────────────────────
+warn_rules:
+  - id: "SENIOR_SPORTSWEAR"
+    description: "Senior age band with sportswear is unusual; verify intent"
+    conditions:
+      - { field: age_band, value: senior }
+      - { field: attire, value: sportswear }
+    severity: WARN
+
+  - id: "CHILD_UNIFORM_CORPORATE"
+    description: "Child age band with corporate uniform is unusual"
+    conditions:
+      - { field: age_band, value: child }
+      - { field: attire, value: uniform_corporate }
+    severity: WARN
+
+  - id: "DYED_HAIR_FORMAL"
+    description: "Dyed hair colours (blue, green) with formal_suit may conflict stylistically"
+    conditions:
+      - { field: hair.colour, value: [dyed_blue, dyed_green] }
+      - { field: attire, value: formal_suit }
+    severity: WARN
+
+# ── Stereotype-risk rules: combinations that may encode ethnic stereotypes ────
+stereotype_risk_rules:
+  - id: "DARK_TONE_RURAL_ATTIRE"
+    description: >
+      Combining dark skin tones with rural/outdoor backgrounds and traditional attire
+      can reinforce geographic stereotypes. Consider pairing with professional
+      backgrounds or business attire to diversify representation.
+    conditions:
+      - { field: skin_tone, value: [dark_brown, deep_dark] }
+      - { field: background, value: outdoor_park }
+      - { field: attire, value: traditional_attire }
+    severity: STEREOTYPE_RISK
+    suggestion: "Consider background=office or attire=business_casual to avoid stereotyping."
+
+  - id: "LIGHT_TONE_FORMAL_ONLY"
+    description: >
+      Over-representation of light skin tones exclusively in formal professional
+      settings can reinforce workplace demographic stereotypes.
+    conditions:
+      - { field: skin_tone, value: [very_light_fair, light_fair] }
+      - { field: attire, value: formal_suit }
+      - { field: background, value: [office, conference_room] }
+    severity: STEREOTYPE_RISK
+    suggestion: "Ensure batch diversity includes other skin tones in professional settings."
+
+# ── Completeness rules per tier ───────────────────────────────────────────────
+completeness_rules:
+  baseline:
+    required_fields: [age_band, presentation, skin_tone, hair, attire, background, pose, seed]
+  strong:
+    required_fields: [age_band, presentation, skin_tone, hair, attire, background, pose, seed]
+    batch_requirements:
+      min_distinct_skin_tones: 3
+      min_distinct_age_bands: 2
+      min_distinct_backgrounds: 2
+  exceptional:
+    required_fields: [age_band, presentation, skin_tone, hair, attire, background, pose, seed, reference_images, consent_token]
+    min_poses: 5
+    min_aspect_ratios: 2

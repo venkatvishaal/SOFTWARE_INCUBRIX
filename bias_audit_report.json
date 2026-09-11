@@ -1,0 +1,82 @@
+{
+  "batch_id": "jobs",
+  "n_avatars": 6,
+  "attribute_entropy": {
+    "skin_tone": {
+      "entropy_bits": 2.585,
+      "distinct_values": [
+        "brown",
+        "deep_dark",
+        "light_fair",
+        "olive",
+        "tan",
+        "warm_medium"
+      ],
+      "status": "OK",
+      "recommendation": null
+    },
+    "age_band": {
+      "entropy_bits": 1.918,
+      "distinct_values": [
+        "middle_aged",
+        "senior",
+        "teenager",
+        "young_adult"
+      ],
+      "status": "OK",
+      "recommendation": null
+    },
+    "hair_colour": {
+      "entropy_bits": 2.252,
+      "distinct_values": [
+        "black",
+        "blonde",
+        "dark_brown",
+        "grey",
+        "white"
+      ],
+      "status": "OK",
+      "recommendation": null
+    },
+    "attire": {
+      "entropy_bits": 2.585,
+      "distinct_values": [
+        "business_casual",
+        "casual_shirt",
+        "creative_casual",
+        "formal_suit",
+        "sportswear",
+        "winter_coat"
+      ],
+      "status": "OK",
+      "recommendation": null
+    },
+    "background": {
+      "entropy_bits": 2.585,
+      "distinct_values": [
+        "home_bookshelf",
+        "neutral_grey",
+        "neutral_white",
+        "office",
+        "outdoor_park",
+        "studio_lit"
+      ],
+      "status": "OK",
+      "recommendation": null
+    },
+    "pose": {
+      "entropy_bits": 1.792,
+      "distinct_values": [
+        "front_facing",
+        "slight_tilt_up",
+        "three_quarter_left",
+        "three_quarter_right"
+      ],
+      "status": "OK",
+      "recommendation": null
+    }
+  },
+  "clone_pairs": [],
+  "overall_status": "OK",
+  "recommendations": []
+}
